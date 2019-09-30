@@ -1,7 +1,7 @@
 <html>
 <body>
-<h1>我叫</h1>
-    <p>我的学号是<span id="studentnumber"></span></p>
+<h1 id="myname">我叫</h1>
+    <p>我的学号是<span id="mynumber"></span></p>
     <input type="button" id="bth" value="下一个">
     <img src="matrix.png"/>
     <img id="logo" src="rbq01.jpg" style="border-radius:10px 20px 40px 80px">
@@ -9,14 +9,14 @@
     <script>
         $(function(){
             $.get("./data.json",function(result){
-                $("myname").text(result.myname);
-                $("mynumber").text(result.mynumber);
+                $("#myname").text(result.myname);
+                $("#mynumber").text(result.mynumber);
             });
         })
         $("#bth").click(function(){
             $.get("./data1.json",function(result){
-                $("myname").text(result.myname);
-                $("mynumber").text(result.mynumber);
+                $("#myname").text(result.myname);
+                $("#mynumber").text(result.mynumber);
             });
         })
     </script>
